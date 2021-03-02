@@ -21,13 +21,7 @@ dbConnection();
 // Usuario: mean_user  Password: wHSmwH24vyik4nHs   
 
 //Rutas
-app.get('/', (req, res) => {
-
-    res.json({
-        ok: true,
-        msg: 'Hola Mundo'
-    });
-});
+app.use('/api/usuarios', require('./routes/usuarios'));
 
 //Levantar el servidor
 app.listen(process.env.PORT, () => {
